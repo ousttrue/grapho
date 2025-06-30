@@ -1,7 +1,9 @@
 [wrap-git]
 url = https://github.com/ocornut/imgui.git
 
-revision = docking
+# ImageButton: breaking change v1.92.1 ?
+# Image: breaking change v1.92 ?
+revision = v1.91.0-docking
 depth = 1
 patch_directory = imgui
 

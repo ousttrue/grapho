@@ -9,6 +9,13 @@ using `c++2b` std::expected for error handling.
 - clang-16
 - gcc-12
 
+
+```sh
+# pwsh msvc
+> meson setup builddir --prefix "$(pwd)/prefix" -Dcpp_std=c++latest -Dexample=true
+> meson install -C builddir
+```
+
 ## namespace
 
 - `grapho::gl3`
