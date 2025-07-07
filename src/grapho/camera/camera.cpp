@@ -2,6 +2,7 @@
 #include <DirectXMath.h>
 #include <algorithm>
 #include <math.h>
+#include <numbers>
 
 namespace grapho {
 namespace camera {
@@ -124,7 +125,7 @@ Camera::YawPitch(int dx, int dy)
   auto qYaw =
     DirectX::XMQuaternionRotationAxis(DirectX::XMVectorSet(0, 1, 0, 0), yaw);
 
-  auto half_pi = static_cast<float>(M_PI / 2) - 0.01f;
+  auto half_pi = static_cast<float>(std::numbers::pi / 2) - 0.01f;
   auto pitch = std::clamp(atan2(y, sqrt(x * x + z * z)) +
                             DirectX::XMConvertToRadians(static_cast<float>(dy)),
                           -half_pi,
